@@ -64,9 +64,9 @@ header, footer {
   }
 }
 
-#places {
-  margin-left: 1.5em;
+.well { margin-left: 1.5em; }
 
+#places {
   h2 {
     margin-bottom: 1em;
     padding-bottom: .5em;
@@ -152,4 +152,52 @@ header, footer {
       width: 95%;
     }
   }
+}
+
+#scores {
+
+  .progress-bars {
+    margin-top: 1.5em;
+    list-style-type: none;
+    margin-left: 0;
+
+    & > li {
+      clear: both;
+      margin-bottom: 3em;
+      @extend .clearfix;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      float: right;
+      width: 45%;
+      li {
+        float: left;
+        margin-bottom: 3px;
+        margin-right: 3px;
+        img { width: 32px; height: 32px; }
+      }
+    }
+
+    .progress {
+      height: 60px;
+      width: 50%;
+      .bar {
+        height: 100%;
+        p {
+          line-height: 60px;
+          font-weight: bold;
+          float: left;
+          height: 100%;
+          margin-left: 1em;
+          color: #333;
+          font-size: 1.8em;
+          text-shadow: #666 1px 1px 8px;
+        }
+      }
+    }
+
+  }
+
 }
