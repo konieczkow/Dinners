@@ -4,7 +4,7 @@
 
 
 
-body {
+body, input {
   font-family: DroidSansRegular;
 
 }
@@ -12,6 +12,12 @@ body {
 h1 {
   font-family: DroidSansBold;
   font-size: 4em;
+  color: #bbb;
+}
+
+h2 {
+  font-size: 2em;
+  color: #222;
 }
 
 input { margin-bottom: 0; }
@@ -30,11 +36,6 @@ header, footer {
   margin: 40px 0;
 }
 
-
-
-
-
-
 .icon-twitter {
   float: left;
   height: 5em;
@@ -46,14 +47,13 @@ header, footer {
 
 #twitterlogin {
   font-size: 2rem;
-  height: 1.2em;
-  line-height: 1.5;
-  padding: .5em 1em .5em 85px;
+  height: 2em;
+  line-height: 2em;
+  padding: .2em 1em .1em 85px;
   margin-right: .5em;
-  background: transparent image-url('t.png') 10px 5px no-repeat;
+  background: transparent image-url('t.png') .15em .2em no-repeat;
   background-size: 60px 60px;
-  width: 50%;
-  max-width: 300px
+  width: 10em;
 }
 
 #twittersubmit {
@@ -61,21 +61,13 @@ header, footer {
   height: 2.2em;
   line-height: 1;
   padding: .5em 1em;
-  width: 25%;
-  max-width: 140px;
+  width: 5em;
 }
 
-@media all and (max-width: 700px) {
-  #twitterlogin {
-    width: 100%;
-    max-width: (100%-2.5em);
-    min-width: 50%;
-  }
+
+@media all and (max-width: 670px) {
   #twittersubmit {
-    width: 100%;
-    min-width: 50%;
-    max-width: 100%;
+    margin-top: .1em;
+    width: 13.7em;
   }
 }
-
-
