@@ -3,10 +3,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    Rails.logger.info auth_hash
-    @user = User.find_or_initialize_by_twitter_id(auth_hash[:twitter_id]) { |user| user.screen_name = auth_hash[:screen_nam] }
+    @user = User.find_or_initialize_with_auth(auth_hash)
     @user.save
     redirect_to '/'
+  end
+
+  def anonymous_create
+    render json: {success: true}
   end
 
   protected
