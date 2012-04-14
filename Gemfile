@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'haml'
+gem 'twitter-bootstrap-rails'
 gem 'sass-twitter-bootstrap-rails', '~> 1.0'
 
 
