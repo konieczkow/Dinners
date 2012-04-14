@@ -1,8 +1,6 @@
 @import "bootstrap/base";
 @import "modules/fonts";
 
-
-
 body, input, p, span, div {
   font-family: DroidSansRegular;
 
@@ -19,7 +17,9 @@ h2 {
   color: #222;
 }
 
-input { margin-bottom: 0; }
+input {
+  margin-bottom: 0;
+}
 
 .container-fluid {
 
@@ -57,7 +57,6 @@ header, footer {
   width: 5em;
 }
 
-
 @media all and (max-width: 670px) {
   #twittersubmit {
     margin-top: .1em;
@@ -68,16 +67,45 @@ header, footer {
 #places {
   margin-left: 1.5em;
 
-
   h2 {
     margin-bottom: 1em;
     padding-bottom: .5em;
     border-bottom: 1px solid #aaa;
   }
 
-  #end_choosing_places {
+  .btn-big {
     float: right;
     font-size: 1rem;
+  }
+
+  .userlist {
+    margin-top: 1em;
+    padding-top: 2em;
+    border-top: 1px solid #aaa;
+    list-style-type: none;
+    margin-left: 1em;
+
+    li {
+      background-color: transparent;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      color: #333;
+      display: inline;
+      margin-right: .7em;
+      img {
+        height: 42px;
+        width: 42px;
+      }
+    }
+
+    .label {
+      font-weight: bold;
+
+    }
+
+    :not(.label){
+      line-height: 2rem;
+    }
   }
 
   ol li {
@@ -85,13 +113,30 @@ header, footer {
     font-size: 1.4rem;
     line-height: 2em;
     padding: .5em;
-    
-    &:nth-child(even) { background-color: #eee; }
+
+    &:nth-child(even) {
+      background-color: #eee;
+    }
     img {
       width: 48px;
       height: 48px;
       float: right;
+    }
 
+    .vote {
+      float: right;
+      width: 32px;
+      height: 32px;
+      background: transparent image-url('star-off.png') 6px 6px no-repeat;
+      text-indent: -9999em;
+      padding: 6px;
+      line-height: 1;
+
+      &:hover, &.active {
+        border: 1px solid #FACD4A;
+        border-radius: 3px;
+        background-image: image-url('star-on.png');
+      }
     }
   }
 
