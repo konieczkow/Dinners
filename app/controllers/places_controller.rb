@@ -8,9 +8,11 @@ class PlacesController < ApplicationController
   end
 
   def new
+    @place = current_event.places.build
   end
 
   def create
+    @place = current_event.places.build(params[:place])
   end
 
   def destroy
