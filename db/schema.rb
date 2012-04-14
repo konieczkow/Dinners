@@ -11,12 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120414110537) do
+ActiveRecord::Schema.define(:version => 20120414133053) do
 
   create_table "events", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id",    :null => false
   end
+
+  add_index "events", ["user_id"], :name => "index_events_on_user_id"
 
   create_table "places", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -24,13 +27,16 @@ ActiveRecord::Schema.define(:version => 20120414110537) do
   end
 
   create_table "users", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "events_count", :default => 0, :null => false
   end
 
   create_table "votes", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_foreign_key "events", "users", :name => "events_user_id_fk", :dependent => :restrict
 
 end
