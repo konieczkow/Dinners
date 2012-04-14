@@ -1,5 +1,4 @@
 @import "bootstrap/base";
-//@import "bootstrap/responsive";
 @import "modules/fonts";
 
 
@@ -22,15 +21,9 @@ h2 {
 
 input { margin-bottom: 0; }
 
-
-
 .container-fluid {
 
 }
-
-
-
-
 
 header, footer {
   margin: 40px 0;
@@ -82,31 +75,36 @@ header, footer {
     border-bottom: 1px solid #aaa;
   }
 
-  #countdown {
+  #end_choosing_places {
     float: right;
-    font-size: 1.6rem;
-    color: #f00;
-    line-height: 1.5;
-
+    font-size: 1rem;
   }
 
-
   ol li {
+    list-style: decimal inside none;
     font-size: 1.4rem;
-    line-height: 1.6;
-    padding-left: .5em;
+    line-height: 2em;
+    padding: .5em;
+    
+    &:nth-child(even) { background-color: #eee; }
+    img {
+      width: 48px;
+      height: 48px;
+      float: right;
 
-    &:nth-child(even) {background-color: #000; }
-    &.form_container {
-      background-color: #019AD2;
-      input {
-        margin: .5em 0;
-        font-size: 1.2rem;
-        line-height: 1.3rem;
-        padding: .4em .4em;
-        width: 15em;
-      }
     }
   }
 
+  .form_container {
+    background-color: #019AD2;
+    padding-left: 1em;
+
+    input {
+      padding: .4em .4em;
+      margin: .5em 0;
+      font-size: 1.2rem;
+      line-height: 1.3rem;
+      width: 95%;
+    }
+  }
 }
