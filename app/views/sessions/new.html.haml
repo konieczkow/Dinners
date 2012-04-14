@@ -1,0 +1,5 @@
+- form_tag url => '/auth/twitter' do
+
+%form.clearfix
+  %input#twitterlogin{:placeholder => "Twitter login", :type => 'text', :name => 'screen_name'}
+    %button.btn.btn-primary#twittersubmit{:type => "submit"} Login
