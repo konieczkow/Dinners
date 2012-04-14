@@ -9,5 +9,12 @@ body {
 
 }
 
-h1 { font-family: DroidSansBold;}
+h1 { font-family: DroidSansBold; }
+
+input { margin-bottom: 0; }
+
+
+.icon-twitter {
+  background-image: image-path('t.png');
+}
 
