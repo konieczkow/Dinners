@@ -56,9 +56,15 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     multi_json (1.2.0)
+    oauth (0.4.5)
     omniauth (1.1.0)
       hashie (~> 1.2)
       rack
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.9)
+      omniauth-oauth (~> 1.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -117,6 +123,7 @@ DEPENDENCIES
   haml
   jquery-rails
   omniauth
+  omniauth-twitter
   rails (= 3.2.0)
   sass-rails (~> 3.2.3)
   sass-twitter-bootstrap-rails (~> 1.0)
