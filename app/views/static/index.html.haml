@@ -1,3 +1,33 @@
-%form.clearfix
-  %input#twitterlogin{:placeholder => "Twitter login", :type => 'text'}
-    %button.btn.btn-primary#twittersubmit{:type => "submit"} Login
+.row
+  .well#places
+    = link_to 'End vote', '#', :class => 'btn btn-primary btn-big', :id => 'end_choosing_places'
+
+    %h2 Voting
+
+    %ol.nav.nav-tabs.nav-stacked.places_list
+      %li
+        = link_to 'Vote', '#', :class => 'vote active'
+        Pizza hut
+
+      %li
+        = link_to 'Vote', '#', :class => 'vote'
+        Chinol na rogu
+
+      %li
+        = link_to 'Vote', '#', :class => 'vote'
+        Kebab
+
+      %li
+        = link_to 'Vote', '#', :class => 'vote'
+        Dagrasso
+
+      %li
+        = link_to 'Vote', '#', :class => 'vote'
+        Brudas
+
+    %ul.userlist
+      %li.label Users online:
+      %li= image_tag 'https://si0.twimg.com/profile_images/1422248111/195627_100000179755620_6126589_n_normal.jpg', :alt => 'User name'
+      %li= image_tag 'https://si0.twimg.com/profile_images/1756760977/pawel_kowalski_big_normal.jpg', :alt => 'User name'
+      %li= image_tag 'https://si0.twimg.com/profile_images/1422248111/195627_100000179755620_6126589_n_normal.jpg', :alt => 'User name'
+      %li= image_tag 'https://si0.twimg.com/profile_images/1756760977/pawel_kowalski_big_normal.jpg', :alt => 'User name'
