@@ -1,7 +1,13 @@
-Ext.application({
-    name: 'Sencha',
+Ext.Loader.setConfig({enabled:true});
 
-    launch: function() {
-        alert('launched');
-    }
+Ext.application({
+        name: 'Dinners',
+        views: ["PlacesContainer"],
+
+        launch: function() {
+            var placesContainer = Ext.create("Dinners.view.PlacesContainer");
+        	Ext.Viewport.add(placesContainer);
+
+            console.log('launch!');
+        }
 });
