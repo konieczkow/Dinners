@@ -1,5 +1,11 @@
 class SessionsController < ApplicationController
   def create
-    render :text => request.env['rack.auth'].inspect    
+    render text: auth_hash
+  end
+
+  protected
+
+  def auth_hash
+    request.env['omniauth.auth']
   end
 end
