@@ -4,7 +4,7 @@
 
 
 
-body, input {
+body, input, p, span, div {
   font-family: DroidSansRegular;
 
 }
@@ -75,14 +75,38 @@ header, footer {
 #places {
   margin-left: 1.5em;
 
+
   h2 {
     margin-bottom: 1em;
     padding-bottom: .5em;
     border-bottom: 1px solid #aaa;
   }
 
+  #countdown {
+    float: right;
+    font-size: 1.6rem;
+    color: #f00;
+    line-height: 1.5;
+
+  }
+
+
   ol li {
     font-size: 1.4rem;
+    line-height: 1.6;
+    padding-left: .5em;
+
+    &:nth-child(even) {background-color: #000; }
+    &.form_container {
+      background-color: #019AD2;
+      input {
+        margin: .5em 0;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        padding: .4em .4em;
+        width: 15em;
+      }
+    }
   }
 
 }

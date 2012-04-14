@@ -1,10 +1,13 @@
 .row
   .well#places
 
+    %p#countdown 2:12
+
     %h2 Places
+
 
     %ol.nav.nav-tabs.nav-stacked
       %li Place 1
-      %li
+      %li.form_container
         %form
           %input#add_place{:placeholder => 'Add new place', :type => 'text', :name => 'place_name'}
