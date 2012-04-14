@@ -32,13 +32,15 @@ ActiveRecord::Schema.define(:version => 20120414141622) do
   add_index "places", ["event_id"], :name => "index_places_on_event_id"
 
   create_table "users", :force => true do |t|
+    t.string   "twitter_id"
     t.string   "screen_name"
-    t.integer  "twitter_id"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.integer  "events_count", :default => 0, :null => false
     t.integer  "votes_count",  :default => 0, :null => false
   end
+
+  add_index "users", ["twitter_id"], :name => "index_users_on_twitter_id", :unique => true
 
   create_table "votes", :force => true do |t|
     t.datetime "created_at", :null => false
