@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    @user = User.find_or_initialize_by_twitter_id(auth_hash['params'][:twitter_id]) { |user| user.screen_name = auth_hash['params'][:screen_nam] }
+    @user = User.find_or_initialize_by_twitter_id(auth_hash[:twitter_id]) { |user| user.screen_name = auth_hash[:screen_nam] }
     @user.save
 
   end
