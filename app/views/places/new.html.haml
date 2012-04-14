@@ -7,25 +7,10 @@
 
 
     %ol.nav.nav-tabs.nav-stacked.places_list
-      %li
-        = image_tag 'https://si0.twimg.com/profile_images/1422248111/195627_100000179755620_6126589_n_normal.jpg', :alt => 'User name'
-        Pizza hut
+      - @places.each do |place|
+        %li
+          = image_tag 'https://si0.twimg.com/profile_images/1422248111/195627_100000179755620_6126589_n_normal.jpg', :alt => place.user.screen_name
+          = place.name
 
-      %li
-        = image_tag 'https://si0.twimg.com/profile_images/1422248111/195627_100000179755620_6126589_n_normal.jpg', :alt => 'User name'
-        Chinol na rogu
-
-      %li
-        = image_tag 'https://si0.twimg.com/profile_images/1756760977/pawel_kowalski_big_normal.jpg', :alt => 'User name'
-        Kebab
-
-      %li
-        = image_tag 'https://si0.twimg.com/profile_images/1422248111/195627_100000179755620_6126589_n_normal.jpg', :alt => 'User name'
-        Dagrasso
-
-      %li
-        = image_tag 'https://si0.twimg.com/profile_images/1422248111/195627_100000179755620_6126589_n_normal.jpg', :alt => 'User name'
-        Brudas
-
-    %form.form_container
-      %input#add_place{:placeholder => 'Add new place', :type => 'text', :name => 'place_name'}
+    = form_for [:event, @place], html: {class: 'form_container'} do |f|
+      = f.text_field :name, placeholder: 'Add new place', type: 'text', class: 'add_place'

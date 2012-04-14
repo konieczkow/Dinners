@@ -4,7 +4,7 @@ Dinners::Application.routes.draw do
   resources :static
 
   resources :events, only: [:new, :create] do
-    resources :places do
+    resources :places, only: [:new, :create, :destroy, :index] do
     end
   end
 
