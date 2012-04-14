@@ -11,6 +11,9 @@
         = stylesheet_link_tag "application", :media => "all"
   %body{:class => "#{controller_name} #{action_name}", :id => "#{controller_name}-#{action_name}"}
     .container-fluid
+      %header
+        %h1 Dinners
+
       .row-fluid
         .span10.offset1
           = yield

@@ -1,5 +1,13 @@
 @import "bootstrap/base";
 @import "bootstrap/responsive";
+@import "modules/fonts";
 
 
+
+body {
+  font-family: DroidSansRegular;
+
+}
+
+h1 { font-family: DroidSansBold;}
 
