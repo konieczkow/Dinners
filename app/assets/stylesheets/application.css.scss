@@ -71,3 +71,18 @@ header, footer {
     width: 13.7em;
   }
 }
+
+#places {
+  margin-left: 1.5em;
+
+  h2 {
+    margin-bottom: 1em;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #aaa;
+  }
+
+  ol li {
+    font-size: 1.4rem;
+  }
+
+}
