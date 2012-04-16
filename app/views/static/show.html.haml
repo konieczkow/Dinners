@@ -1,0 +1,10 @@
+.row
+  .well
+    -# %h2= @event.event_url
+    %h2
+      Share your event:
+      = link_to 'http://haxxproxx.com/8998209877823367', 'http://haxxproxx.com/8998209877823367', :id => 'event_url'
+
+
+  .well
+    = link_to 'Start adding places', '/event/x/places/new', :class => 'btn btn-primary start_adding_places'

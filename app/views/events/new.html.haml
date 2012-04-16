@@ -1,1 +1,5 @@
-%h3= @event.event_url
+.row
+  .well
+    %h2= @event.event_url
+
+    = link_to 'Start adding places', places_new_path, :class => 'btn btn-primary'

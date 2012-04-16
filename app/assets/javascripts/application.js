@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$('#event_url').on('click', function() {return false;});
